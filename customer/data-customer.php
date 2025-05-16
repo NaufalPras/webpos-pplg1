@@ -58,7 +58,7 @@ if ($msg == 'updated') {
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="<?= $main_url ?>dashboard.php">Home</a></li>
+            <li class="breadcrumb-item"><a href="<?= $main_url ?>customer/data-customer.php">Home</a></li>
             <li class="breadcrumb-item active">Customer</li>
           </ol>
         </div><!-- /.col -->
@@ -87,17 +87,16 @@ if ($msg == 'updated') {
               <tr>
                 <th>No</th>
                 <th>Nama</th>
-                <th>Telpon</th>
+                <th>Telp</th>
                 <th>Alamat</th>
-                <th>Deskripsi</th>
                 <th style="width: 10%;">Operasi</th>
               </tr>
             </thead>
             <tbody>
               <?php
               $no = 1;
-              $supplier = getData("SELECT * FROM tbl_customer");
-              foreach ($supplier as $s): ?>
+              $customer = getData("SELECT * FROM tbl_customer");
+              foreach ($customer as $s): ?>
                 <tr>
                   <td><?= $no++ ?></td>
                   <td><?= $s['nama'] ?></td>
